@@ -30,8 +30,15 @@ movies = pickle.load(open('movie_list.pkl','rb'))
 similarity_0 = pickle.load(open('chunk_0.pkl','rb'))
 similarity_1 = pickle.load(open('chunk_1.pkl','rb'))
 similarity_2 = pickle.load(open('chunk_2.pkl','rb'))
+similarity_3 = pickle.load(open('chunk_3.pkl','rb'))
+similarity_4 = pickle.load(open('chunk_4.pkl','rb'))
+similarity_5 = pickle.load(open('chunk_5.pkl','rb'))
+similarity_6 = pickle.load(open('chunk_6.pkl','rb'))
+similarity_7 = pickle.load(open('chunk_7.pkl','rb'))
+similarity_8 = pickle.load(open('chunk_8.pkl','rb'))
 
-similarity = np.concatenate((similarity_0, similarity_1, similarity_2), axis=0)
+similarity = np.concatenate((similarity_0, similarity_1, similarity_2, similarity_3,
+                            similarity_4, similarity_5, similarity_6, similarity_7, similarity_8), axis=0)
 
 movie_list = movies['title'].values
 selected_movie = st.selectbox(
